@@ -136,17 +136,17 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                     32
+  #define Z_MIN_PROBE_PIN                     AUX1_05_PIN
 #endif
 
 //
 // Steppers
 //
-#define X_STEP_PIN                            46//54
-#define X_DIR_PIN                             48//55
-#define X_ENABLE_PIN                          62//38
+#define X_STEP_PIN                            54
+#define X_DIR_PIN                             55
+#define X_ENABLE_PIN                          38
 #ifndef X_CS_PIN
-  #define X_CS_PIN                            40//53
+  #define X_CS_PIN                            53
 #endif
 
 #define Y_STEP_PIN                            60
@@ -157,16 +157,16 @@
 #endif
 
 #ifndef Z_STEP_PIN
-  #define Z_STEP_PIN                          54//46
+  #define Z_STEP_PIN                          46
 #endif
 #ifndef Z_DIR_PIN
-  #define Z_DIR_PIN                           55//48
+  #define Z_DIR_PIN                           48
 #endif
 #ifndef Z_ENABLE_PIN
-  #define Z_ENABLE_PIN                        38//62
+  #define Z_ENABLE_PIN                        62
 #endif
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                            53//40
+  #define Z_CS_PIN                            40
 #endif
 
 #ifndef E0_STEP_PIN
