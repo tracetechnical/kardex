@@ -785,7 +785,7 @@
   #undef Y_ENABLE_ON
   #undef DISABLE_Y
   #undef INVERT_Y_DIR
-  #undef Y_HOME_DIR
+  #undef Y_HOME_DIRs
   #undef Y_MIN_POS
   #undef Y_MAX_POS
   #undef MANUAL_Y_HOME_POS

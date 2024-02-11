@@ -198,6 +198,11 @@ typedef IF<(NUM_AXIS_ENUMS > 8), uint16_t, uint8_t>::type axis_bits_t;
 //
 typedef float feedRate_t;
 
+// Define types based on largest bit width stored value required
+#define bits_t(W)   typename IF<((W)>   16), uint32_t, typename IF<((W)>  8), uint16_t, uint8_t>::type>::type
+#define uvalue_t(V) typename IF<((V)>65535), uint32_t, typename IF<((V)>255), uint16_t, uint8_t>::type>::type
+#define value_t(V)  typename IF<((V)>32767),  int32_t, typename IF<((V)>127),  int16_t,  int8_t>::type>::type
+
 //
 // celsius_t is the native unit of temperature. Signed to handle a disconnected thermistor value (-14).
 // For more resolition (e.g., for a chocolate printer) this may later be changed to Celsius x 100
